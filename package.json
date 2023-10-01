@@ -1,0 +1,22 @@
+{
+  "name": "testdashboard",
+  "version": "1.0.0",
+  "description": "A dashboard webapp to display test results",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github"
+  },
+  "author": "Alex Dennis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "typescript": "^5.2.2"
+  }
+}
