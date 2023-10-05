@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 app.use("/", (req, res) => {
-  res.send("Welcome to the Test Dashboard");
+  res.render("index");
 });
 
 app.set("view engine", "ejs");
