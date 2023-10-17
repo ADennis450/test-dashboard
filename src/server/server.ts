@@ -1,14 +1,22 @@
 import express from "express";
+import os from "node:os";
+import config from "./config";
 
-const app = express();
-const port = 3000;
+const server = express();
 
-app.use("/", (req, res) => {
-  res.render("index");
+server.use(express.static("dist"));
+
+server.set("view engine", "ejs");
+
+server.use("/", (req, res) => {
+  res.render("index", {
+    initialContent: "Loading...",
+  });
 });
 
-app.set("view engine", "ejs");
-
-app.listen(port, () => {
-  console.info(`server started at http://localhost:${port}`);
+server.listen(config.PORT, config.HOST, () => {
+  console.log(
+    `Express is listening at ${config.SERVER_URL}`,
+    `Free Mem: ${os.freemem() / 1024 / 1024}`
+  );
 });
