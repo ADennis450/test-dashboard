@@ -3,78 +3,224 @@ import { connectClient, stopClient } from "../server/db";
 async function main() {
   const client = await connectClient();
 
-  await client.collection("contests").deleteMany({});
+  await client.collection("test_data").deleteMany({});
 
-  const resp = await client.collection("contests").insertMany([
+  const resp = await client.collection("test_data").insertMany([
     {
-      id: "cognitive-building-bricks",
-      categoryName: "Business/Company",
-      contestName: "Cognitive Building Bricks",
-      description: `
-This product is a classroom tool that scaffolds higher order thinking. Its a collaborative strategy that using building bricks to help structure students ideas. Learners build knowledge structures with information (attached to different coloured bricks). Students desks are turned into workshops where they physically manipulate information into meaningful creations. They show sequences of information (like stories), rank information by importance and pretty much all other essential cognitive skills you need at school. The end result is clarity in thought and better collaborative conversations. I want this to be marketed as a sophisticated knowledge tool applicable to all ages and subjects. It gives students the cognitive edge, they get a little more 'RAM'!.
-
-I want to continue with the construction/building theme as well as the mind/brain/learning theme. They need to be blended somehow. Teachers find it easier to talk about building/scaffolding analogies as its less abstract.
-      `,
-      names: [
+      id: "how-we-help-page",
+      uri: "features/lightwell/HowWeHelpPage.feature",
+      keyword: "Feature",
+      name: "How We Help Page",
+      description: "",
+      line: 1,
+      elements: [
         {
-          id: "mind-assembly",
-          name: "Mind Assembly",
-          timestamp: new Date(),
-        },
-        {
-          id: "brain-scaffold",
-          name: "Brain Scaffold",
-          timestamp: new Date(),
+          id: "how-we-help-page;navigate-to-how-we-help-page",
+          keyword: "Scenario",
+          name: "Navigate to How We Help Page",
+          description: "",
+          line: 3,
+          type: "scenario",
+          steps: [
+            {
+              keyword: "Given ",
+              name: 'I am on the "home" page',
+              line: 4,
+              match: {
+                location: "features/lightwell/step_definitions/my_steps.rb:8",
+              },
+              result: {
+                status: "passed",
+                duration: 117700,
+              },
+            },
+            {
+              keyword: "And ",
+              name: "I navigate to page",
+              line: 5,
+              match: {
+                location: "features/lightwell/step_definitions/my_steps.rb:3",
+              },
+              result: {
+                status: "passed",
+                duration: 1284031700,
+              },
+            },
+            {
+              keyword: "When ",
+              name: 'I click on the "find out how button"',
+              line: 6,
+              match: {
+                location: "features/lightwell/step_definitions/my_steps.rb:12",
+              },
+              result: {
+                status: "passed",
+                duration: 126880300,
+              },
+            },
+            {
+              keyword: "And ",
+              name: 'I am on the "how we help" page',
+              line: 7,
+              match: {
+                location: "features/lightwell/step_definitions/my_steps.rb:8",
+              },
+              result: {
+                status: "passed",
+                duration: 62000,
+              },
+            },
+            {
+              keyword: "Then ",
+              name: 'I see the "how we help header"',
+              line: 8,
+              match: {
+                location: "features/lightwell/step_definitions/my_steps.rb:16",
+              },
+              result: {
+                status: "passed",
+                duration: 4796447000,
+              },
+            },
+          ],
+          tags: [
+            {
+              name: "@run",
+              line: 2,
+            },
+          ],
+          before: [
+            {
+              match: {
+                location: "features/utils/hook.rb:3",
+              },
+              result: {
+                status: "passed",
+                duration: 1872298800,
+              },
+            },
+          ],
+          after: [
+            {
+              match: {
+                location: "features/utils/hook.rb:12",
+              },
+              result: {
+                status: "passed",
+                duration: 312103400,
+              },
+            },
+          ],
         },
       ],
     },
     {
-      id: "educating-people-about-sustainable-food-production",
-      categoryName: "Magazine/Newsletter",
-      contestName:
-        "Educating people about sustainable food production",
-      description: `
-Educating people about sustainable food production
-      `,
-      names: [],
-    },
-    {
-      id: "big-data-analytics-for-cash-circulation",
-      categoryName: "Software Component",
-      contestName: "Big Data Analytics for Cash Circulation",
-      description: `
-Data is created at every touch point in a notes life-cycle. Because of the volume of the data, it can be difficult to store, analyse and gain insight. Collecting, processing and analysing the data using big data technologies and displaying the results in an interactive display makes it easy to make informative decisions, overcome problem and plan for the future.
-
-It works using big data technologies and displays the results in modern browsers, combining powerful visualisation components and a data-driven approach to interact with the data.
-
-It enables you to analyse data that were not previously possible. The volume, variety, complexity of the analytical processing involved, and the responsiveness required are now achievable with the product. Gaining smarter decision making but also provide faster time to value.
-    `,
-      names: [
+      id: "Failed Test",
+      uri: "features/lightwell/HowWeHelpPage.feature",
+      keyword: "Feature",
+      name: "How We Fail",
+      description: "",
+      line: 1,
+      elements: [
         {
-          id: "cash-view",
-          name: "Cash View",
-          timestamp: new Date(),
-        },
-        {
-          id: "currency-map",
-          name: "Currency Map",
-          timestamp: new Date(),
-        },
-        {
-          id: "cash-board",
-          name: "Cash Board",
-          timestamp: new Date(),
+          id: "how-we-fail-page;navigate-to-how-we-help-page",
+          keyword: "Scenario",
+          name: "Navigate to How We Help Page",
+          description: "",
+          line: 3,
+          type: "scenario",
+          steps: [
+            {
+              keyword: "Given ",
+              name: 'I am on the "home" page',
+              line: 4,
+              match: {
+                location: "features/lightwell/step_definitions/my_steps.rb:8",
+              },
+              result: {
+                status: "passed",
+                duration: 117700,
+              },
+            },
+            {
+              keyword: "And ",
+              name: "I navigate to page",
+              line: 5,
+              match: {
+                location: "features/lightwell/step_definitions/my_steps.rb:3",
+              },
+              result: {
+                status: "passed",
+                duration: 1284031700,
+              },
+            },
+            {
+              keyword: "When ",
+              name: 'I click on the "find out how button"',
+              line: 6,
+              match: {
+                location: "features/lightwell/step_definitions/my_steps.rb:12",
+              },
+              result: {
+                status: "passed",
+                duration: 126880300,
+              },
+            },
+            {
+              keyword: "And ",
+              name: 'I am on the "how we help" page',
+              line: 7,
+              match: {
+                location: "features/lightwell/step_definitions/my_steps.rb:8",
+              },
+              result: {
+                status: "passed",
+                duration: 62000,
+              },
+            },
+            {
+              keyword: "Then ",
+              name: 'I see the "how we help header"',
+              line: 8,
+              match: {
+                location: "features/lightwell/step_definitions/my_steps.rb:16",
+              },
+              result: {
+                status: "failed",
+                duration: 4796447000,
+              },
+            },
+          ],
+          tags: [
+            {
+              name: "@run",
+              line: 2,
+            },
+          ],
+          before: [
+            {
+              match: {
+                location: "features/utils/hook.rb:3",
+              },
+              result: {
+                status: "passed",
+                duration: 1872298800,
+              },
+            },
+          ],
+          after: [
+            {
+              match: {
+                location: "features/utils/hook.rb:12",
+              },
+              result: {
+                status: "failed",
+                duration: 312103400,
+              },
+            },
+          ],
         },
       ],
-    },
-    {
-      id: "free-programming-books",
-      categoryName: "Website",
-      contestName: "Free programming books",
-      description: `
-A list of free online programming books, categorized by languages/topics
-    `,
-      names: [],
     },
   ]);
 
