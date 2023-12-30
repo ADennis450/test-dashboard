@@ -224,7 +224,7 @@ async function main() {
     },
   ]);
 
-  console.info("Inserted Contests:", resp.insertedCount);
+  console.info("Inserted Tests:", resp.insertedCount);
 
   stopClient();
 }
