@@ -9,7 +9,7 @@ const App = ({ initialData }) => {
     <>
       <div className="container">
         <Header message={"Welcome to the Test Dashboard"} />
-        <TestResult key={"testResult"} testResults={initialData} />
+        <TestResult intialTestResults={initialData.testResults} />
       </div>
     </>
   );
