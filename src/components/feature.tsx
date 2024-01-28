@@ -5,12 +5,11 @@ const Feature: React.FC<{ feature: any }> = ({ feature }) => {
   let i = 0;
   return (
     <div className="test-list">
-      <div className="feature">{feature.name}</div>
+      <div id={feature.name} className="feature">
+        {feature.name}
+      </div>
       {feature.elements.map((scenarioResult) => {
-        i++;
-        return (
-          <Scenario key={scenarioResult.id + i} scenario={scenarioResult} />
-        );
+        return <Scenario key={scenarioResult.id} scenario={scenarioResult} />;
       })}
     </div>
   );

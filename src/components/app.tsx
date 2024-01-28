@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./header";
 import { useState } from "react";
-import TestResult from "./test-result";
+import TestResult from "./test-results";
 
 const App = ({ initialData }) => {
   const [counter, setCounter] = useState(0);

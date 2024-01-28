@@ -8,7 +8,15 @@ const Scenario: React.FC<{ scenario: any }> = ({ scenario }) => {
         <div>
           {scenario.steps.map((step) => {
             {
-              return <div className={step.result.status}>{step.name}</div>;
+              return (
+                <div
+                  id={"step" + step.line}
+                  key={step.line}
+                  className={step.result.status}
+                >
+                  {step.name}
+                </div>
+              );
             }
           })}
         </div>

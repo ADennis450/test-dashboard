@@ -9,9 +9,9 @@ const TestResult = ({ intialTestResults }) => {
   const [testResults, setTestResults] = useState(intialTestResults);
 
   useEffect(() => {
-    fetchTestResults().then((testResults) => {
-      setTestResults(testResults);
-    });
+    // fetchTestResults().then((testResults) => {
+    //   setTestResults(testResults);
+    // });
   }, []);
   return (
     <div className="feature-block">
